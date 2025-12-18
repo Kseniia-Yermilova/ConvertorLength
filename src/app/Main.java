@@ -6,11 +6,17 @@ public class Main {
     static void main() {
         System.out.println("Convertor of length with SSH");
         double mls = 3;
+        double km = 5;
         double kilometers = convMilesToKm(mls);
-        System.out.println("Result is " + kilometers + " km");
+        double miles = convKmToMiles(km);
+        System.out.println("Result is " + kilometers + " km and " + miles + " miles");
     }
 
     private static double convMilesToKm(double miles){
         return miles * CONV_K;
+    }
+
+    private static double convKmToMiles(double km){
+        return km / CONV_K;
     }
 }
